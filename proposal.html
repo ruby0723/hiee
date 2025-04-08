@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Boyfriend, Janu?</title>
+    <style>
+        /* Reset default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100%;
+            background: linear-gradient(to top, #f8d7da, #f5c6cb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Bouncing hearts animation */
+        .heart {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounceHeart 2s infinite ease-in-out;
+        }
+
+        @keyframes bounceHeart {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-40px) scale(1.2);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .heart-img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Title animation */
+        h1 {
+            font-size: 50px;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            animation: fadeInTitle 1.5s ease-out;
+        }
+
+        @keyframes fadeInTitle {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .message {
+            font-size: 24px;
+            color: #ff8cbb;
+            margin-bottom: 30px;
+            font-family: 'Comic Sans MS', cursive;
+            animation: fadeInMessage 2s ease-out;
+        }
+
+        @keyframes fadeInMessage {
+            0% {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .message b {
+            color: #ff66b3;
+        }
+
+        /* Button styling */
+        .button {
+            padding: 18px 36px;
+            background-color: #ff66b3;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #ff3385;
+            transform: scale(1.05);
+        }
+
+        /* Disabled "No" button styling */
+        .button.disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Cute floating stars animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.4;
+            animation: floatStars 5s infinite ease-in-out;
+        }
+
+        @keyframes floatStars {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100px);
+            }
+        }
+
+        .stars img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            animation: sparkle 4s infinite;
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Cute images with animation */
+        .cute-images img {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            animation: bounce 2.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Footer with extra cute text */
+        .footer {
+            position: absolute;
+            bottom: 15px;
+            color: #ff69b4;
+            font-size: 18px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        /* Media query for mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            .message {
+                font-size: 20px;
+            }
+
+            .button {
+                font-size: 18px;
+                padding: 15px 30px;
+                width: 80%;
+            }
+
+            .cute-images img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating stars -->
+    <div class="stars">
+        <img src="https://i.pinimg.com/originals/f2/e1/4c/f2e14c3754088a8a52bda13e27220181.gif" alt="sparkle star" style="animation-delay: 0s;">
+        <img src="https://i.pinimg.com/originals/65/28/7a/65287a19692bfeac7a7fce6ad296cef4.gif" alt="sparkle star" style="animation-delay: 2s;">
+        <img src="https://i.pinimg.com/originals/2d/c1/d4/2dc1d4306778b0b7b6ca67d1d3e219f5.gif" alt="sparkle star" style="animation-delay: 4s;">
+    </div>
+
+    <div class="container">
+        <!-- Heart animation -->
+        <div class="heart">
+            <img src="https://media.tenor.com/Dixl45imipcAAAAM/couple-fofo.gif" alt="Bouncing Heart" class="heart-img">
+        </div>
+
+        <!-- Title and message -->
+        <h1>Will You Be My Boyfriend, Janu? 💖</h1>
+        <p class="message">
+            I'm sorry if I ever irritated you...<br>
+            But I can't stop thinking about you! 😳💖<br><br>
+            Will you be my boyfriend? 💕
+        </p>
+
+        <!-- Cute animated GIFs -->
+        <div class="cute-images">
+            <img src="https://media.tenor.com/2jXqUQ_t1LcAAAAM/kiss-bed.gif" alt="Cute puppy">
+            <img src="https://i.pinimg.com/originals/95/08/6d/95086ddda91cbaa7b414d8b457247049.gif" alt="Cute love heart">
+            <img src="https://media.tenor.com/75k0SNkph3sAAAAM/peach-goma.gif" alt="Cute kitten">
+        </div>
+
+        <!-- Yes and No buttons -->
+        <div>
+            <!-- Say Yes button (no WhatsApp link now) -->
+            <button class="button" onclick="alert('Yay! You said Yes! 💖')">
+                Say Yes! 💖
+            </button>
+            <!-- Disabled No button -->
+            <button class="button disabled" disabled>
+                Say No ❌
+            </button>
+        </div>
+
+        <!-- Footer message -->
+        <div class="footer">
+            Made with love ❤️
+        </div>
+    </div>
+
+</body>
+</html>
